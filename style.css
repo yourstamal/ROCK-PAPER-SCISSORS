@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#heading {
+    height: 50px;
+    width: 100%;
+    color: blue;
+    background-color: #d5e1df;
+    font-size: large;
+}
+
+body {
+    background-color: #e3eaa7;
+}
+
+#heading1 {
+    display: flex;
+    justify-content: center;
+    background-color: #86af49;
+}
+
+#heading2 {
+    display: flex;
+    justify-content: center;
+    background-color: #b5e7a0;
+    
+}
+
+#images {
+    padding: 50px;
+    padding-bottom: 0%;
+    display: flex;
+    justify-content:space-around;
+    height: 200px;
+}
+
+.name {
+    padding-left: 40%;
+    color: blue;
+    text-decoration: underline;
+    text-decoration-color: chocolate;
+    text-decoration-style: dotted;
+}
+
+img{
+    padding: 5px;
+    padding-bottom: 0%;
+    height: 150px;
+    width: 150px;
+}
+
+
+.items:hover {
+    background-color: aqua;
+    border: 5px solid red;
+    border-radius: 25%;
+}
+
+#choice {
+    padding-top: 50px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.choosed {
+    color: rgb(255, 0, 136);
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-color: rgb(208, 255, 127);
+}
+
+#result {
+    padding-left: 50%;
+    padding-top: 100px;
+    color: rgb(255, 128, 0);
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 127, 242);
+}
