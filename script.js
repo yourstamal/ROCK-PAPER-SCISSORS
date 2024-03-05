@@ -7,6 +7,8 @@ let result = document.querySelector("#result");
 
 let uset;
 let comSet;
+var userWins = 0;
+var computerWins = 0;
 
 let clickRock = false;
 let clickPaper = false;
@@ -45,32 +47,37 @@ function playGame() {
 
 uchoice.innerText = 'You Choosed :- ' + uset;
 
-let goption = ['ROCK', 'PAPER', 'SCISSOR'];
+let goption = ['ROCK', 'PAPER', 'SCISSORS'];
 let goptionIndex = Math.floor(Math.random() * goption.length);
 comSet = goption[goptionIndex];
 schoice.innerText = 'System Choosed :- ' + comSet;
 
 winner(comSet, uset);
+updateWinCounts();
 
 }
 
 function winner(comSet, uset){
     if(comSet!=uset){
-        if( (uset === 'ROCK' && comSet === 'SCISSOR') ||
+        if( (uset === 'ROCK' && comSet === 'SCISSORS') ||
         (uset === 'PAPER' && comSet === 'ROCK') ||
         (uset === 'SCISSOR' && comSet === 'PAPER')){
             result.innerText = "Yahh !! You win";
+            userWins++;
         }
         else{
                 result.innerText = "Ooops !! You Lose "
+                computerWins++;
         }
     }
     else{
         result.innerText = " Hey !!  It's is a TIE";
     }
 }
+function updateWinCounts() {
+    document.getElementById("user-wins").innerHTML = `Your Wins: ${userWins}`;
+    document.getElementById("computer-wins").innerHTML = `Computer Wins: ${computerWins}`;
+}
 
 console.log(comSet);
 console.log(uset);
-
-
