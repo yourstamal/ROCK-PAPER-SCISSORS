@@ -47,7 +47,7 @@ function playGame() {
 
 uchoice.innerText = 'You Choosed :- ' + uset;
 
-let goption = ['ROCK', 'PAPER', 'SCISSORS'];
+let goption = ['ROCK', 'PAPER', 'SCISSOR'];
 let goptionIndex = Math.floor(Math.random() * goption.length);
 comSet = goption[goptionIndex];
 schoice.innerText = 'System Choosed :- ' + comSet;
@@ -59,7 +59,7 @@ updateWinCounts();
 
 function winner(comSet, uset){
     if(comSet!=uset){
-        if( (uset === 'ROCK' && comSet === 'SCISSORS') ||
+        if( (uset === 'ROCK' && comSet === 'SCISSOR') ||
         (uset === 'PAPER' && comSet === 'ROCK') ||
         (uset === 'SCISSOR' && comSet === 'PAPER')){
             result.innerText = "Yahh !! You win";
